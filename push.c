@@ -17,7 +17,7 @@ dprintf(STDERR_FILENO, "Error: malloc failed\n");
 exit(EXIT_FAILURE);
 }
 
-if (!monty.arg || (_isdigit(monty.arg) == -1))
+if (!monty.arg || (isdigit(monty.arg) == -1))
 {
 dprintf(STDERR_FILENO, "L%u: usage: push integer\n", ln);
 exit(EXIT_FAILURE);
