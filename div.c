@@ -1,11 +1,11 @@
 #include "monty.h"
 #include <stdlib.h>
 /**
- * div - divides the top two elements of the stack.
+ * divide- divides the top two elements of the stack.
  * @stack: pointer to lists for monty stack
  * @ln: number of line opcode occurs on
 */
-void div(stack_t **stack, unsigned int ln)
+void divide(stack_t **stack, unsigned int ln)
 {
 stack_t *temp;
 int len = 0;
