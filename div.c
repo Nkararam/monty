@@ -8,7 +8,7 @@
 void divide(stack_t **stack, unsigned int ln)
 {
 stack_t *temp;
-int len = 0;
+int len = 0, result;
 
 temp = *stack;
 while (temp)
