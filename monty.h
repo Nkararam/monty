@@ -72,7 +72,7 @@ void mod(stack_t **stack, unsigned int ln);
 void pchar(stack_t **stack, unsigned int ln);
 void pstr(stack_t **stack, unsigned int ln);
 void rotl(stack_t **stack, unsigned int ln);
-void rotr(stack_t **stack, unsigned int ln);
+void f_rotr(stack_t **stack, __attribute__((unused)) unsigned int ln);
 void addnode(stack_t **stack, int n);
 void addqueue(stack_t **stack, int n);
 void queue(stack_t **stack, unsigned int ln);
