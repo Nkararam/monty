@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <stdlib.h>
 /**
  * div - divides the top two elements of the stack.
  * @stack: pointer to lists for monty stack
