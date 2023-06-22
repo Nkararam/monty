@@ -1,13 +1,13 @@
 #include "monty.h"
 /**
- * _pall - prints all elements in the list
- * @stack: double pointer to the head node of linked list
- * @line_number: number of line opcode occurs on
+ * pall - prints all elements in a list
+ * @stack: double pointer to head node of list
+ * @ln: line number of bytecode file
 */
-void _pall(stack_t **stack, unsigned int line_number)
+void pall(stack_t **stack, unsigned int ln)
 {
 stack_t *temp;
-(void) line_number;
+(void)ln;
 temp = *stack;
 while (temp)
 {
