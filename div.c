@@ -27,7 +27,7 @@ if (temp->n == 0)
 fprintf(stderr, "L%d: division by zero\n", ln);
 exit(EXIT_FAILURE);
 }
-int result = temp->next->n / temp->n;
+result = temp->next->n / temp->n;
 temp->next->n = result;
 *stack = temp->next;
 free(temp);
