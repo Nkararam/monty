@@ -20,7 +20,7 @@ fprintf(stderr, "L%d: can't mul, stack too short\n", ln);
 exit(EXIT_FAILURE);
 }
 temp = *stack;
-int result = temp->next->n * temp->n;
+result = temp->next->n * temp->n;
 temp->next->n = result;
 *stack = temp->next;
 free(temp);
