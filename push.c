@@ -4,8 +4,9 @@
  * push - adds an element to the stack
  * @stack: double pointer to head node of list
  * @ln: line number of bytecode file
+ * @monty: monty struct containing the arguments
 */
-void push(stack_t **stack, unsigned int ln)
+void push(stack_t **stack, unsigned int ln, monty_t monty)
 {
 stack_t *new_node;
 int data;
