@@ -52,7 +52,7 @@ typedef struct monty_s
 
 /* in monty.c */
 FILE *check_args(int, char **);
-void (*get_ops(char opcode*))(stack_t **, unsigned int);
+void (*get_ops(char *opcode))(stack_t **, unsigned int);
 void init_monty(void);
 
 /* in util.c */
