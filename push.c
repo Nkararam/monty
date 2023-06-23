@@ -5,8 +5,7 @@
  * @stack: double pointer to head node of list
  * @ln: line number of bytecode file
 */
-void push(stack_t **stack, __attribute__((unused))
-	unsigned int ln, __attribute__((unused)) bus_t *bus);
+void push(stack_t **stack,unsigned int ln);
 
 {
 	stack_t *new_node;
@@ -19,7 +18,7 @@ void push(stack_t **stack, __attribute__((unused))
 		exit(EXIT_FAILURE);
 	}
 
-	if (!bus->arg || (isdigit(bus->arg) == 0))
+	if (!monty.arg || (_isdigit(monty.arg) == -1))
 	{
 		dprintf(STDERR_FILENO, "L%u: usage: push integer\n", ln);
 		exit(EXIT_FAILURE);
@@ -34,7 +33,6 @@ void push(stack_t **stack, __attribute__((unused))
 		(*stack) = new_node;
 		return;
 	}
-	/* if stack is not NULL */
 	new_node->next = (*stack);
 	(*stack)->prev = new_node;
 	(*stack) = new_node;
