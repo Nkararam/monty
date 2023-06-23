@@ -35,7 +35,7 @@ typedef struct stack_s
 typedef struct instruction_s
 {
 char *opcode;
-void (*f)(stack_t **stack, unsigned int line_number, bus_t *bus);
+void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 /**
  * struct monty_s - global variable for monty interpreter
@@ -65,8 +65,7 @@ monty_t monty;
 
 void push(stack_t **stack, unsigned int ln);
 void pall(stack_t **stack, unsigned int ln);
-void pint(stack_t **stack, unsigned int ln)
-	;
+void pint(stack_t **stack, unsigned int ln);
 void pop(stack_t **stack, unsigned int ln);
 void swap(stack_t **stack, unsigned int ln);
 void add(stack_t **stack, unsigned int ln);
