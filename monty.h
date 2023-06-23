@@ -48,11 +48,11 @@ typedef struct monty_s
 	unsigned int ln;
 	char *arg;
 	stack_t *stack;
-}  monty_t
+}  monty_t;
 
 /* in monty.c */
 FILE *check_args(int, char **);
-void (*get_ops(char *))(stack_t **, unsigned int);
+void (*get_ops(char *))(stack_t **, unsigned int ln);
 void init_monty(void);
 
 /* in util.c */
