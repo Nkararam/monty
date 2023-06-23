@@ -34,8 +34,8 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-	char *opcode;
-	void (*f)(stack_t **stack, unsigned int line_number);
+char *opcode;
+void (*f)(stack_t **stack, unsigned int line_number, bus_t *bus);
 } instruction_t;
 /**
  * struct monty_s - global variable for monty interpreter
@@ -53,7 +53,8 @@ typedef struct monty_s
 /* in monty.c */
 FILE *check_args(int, char **);
 void (*get_ops(char *opcode))(stack_t **, unsigned int);
-void init_monty(void);
+void init_monty(void
+		);
 
 /* in util.c */
 int _isdigit(char *);
