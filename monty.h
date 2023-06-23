@@ -65,8 +65,6 @@ monty_t monty;
 void push(stack_t **stack, unsigned int ln);
 void pall(stack_t **stack, unsigned int ln);
 void pint(stack_t **stack, unsigned int ln);
-int execute(char *content, stack_t **stack, unsigned int ln, FILE *file);
-void free_stack(stack_t *stack);
 void pop(stack_t **stack, unsigned int ln);
 void swap(stack_t **stack, unsigned int ln);
 void add(stack_t **stack, unsigned int ln);
@@ -77,10 +75,9 @@ void mul(stack_t **stack, unsigned int ln);
 void mod(stack_t **stack, unsigned int ln);
 void pchar(stack_t **stack, unsigned int ln);
 void pstr(stack_t **stack, unsigned int ln);
-void rotl(stack_t **stack, unsigned int ln);
-void rotr(stack_t **stack,  unsigned int ln);
+void rotl(stack_t **stac);
+void rotr(stack_t **stack);
 void addnode(stack_t **stack, int n);
 void addqueue(stack_t **stack, int n);
-void queue(stack_t **stack, unsigned int ln);
-void stack(stack_t **stack, unsigned int ln);
+
 #endif

@@ -4,7 +4,7 @@
   *@stack: pointer to lists for monty stack
   *@ln: number of line opcode occurs on
  */
-void rotl(stack_t **stack, unsigned int ln)
+void rotl(stack_t **stack)
 {
 stack_t *temp = *stack, *aux;
 if (*stack == NULL || (*stack)->next == NULL)
