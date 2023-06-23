@@ -52,7 +52,7 @@ typedef struct monty_s
 
 /* in monty.c */
 FILE *check_args(int, char **);
-void (*get_ops(char *))(stack_t **, unsigned int ln);
+void (*get_ops(char opcode*))(stack_t **, unsigned int);
 void init_monty(void);
 
 /* in util.c */
@@ -64,7 +64,8 @@ monty_t monty;
 
 void push(stack_t **stack, unsigned int ln);
 void pall(stack_t **stack, unsigned int ln);
-void pint(stack_t **stack, unsigned int ln);
+void pint(stack_t **stack, unsigned int ln)
+	;
 void pop(stack_t **stack, unsigned int ln);
 void swap(stack_t **stack, unsigned int ln);
 void add(stack_t **stack, unsigned int ln);
