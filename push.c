@@ -6,7 +6,7 @@
  * @stack: double pointer to head node of list
  * @ln: line number of bytecode file
 */
-void push(stack_t **stack,unsigned int ln)
+void push(stack_t **stack, unsigned int ln)
 {
 stack_t *new_node;
 int data;
