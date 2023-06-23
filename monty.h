@@ -62,7 +62,7 @@ int _isdigit(char *);
 extern monty_t monty;
 monty_t monty;
 
-
+void free_stack(stack_t *stack);
 void push(stack_t **stack, unsigned int ln);
 void pall(stack_t **stack, unsigned int ln);
 void pint(stack_t **stack, unsigned int ln);

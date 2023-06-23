@@ -2,7 +2,6 @@
 /**
   *rotr- rotates the stack to the bottom
  * @stack: pointer to lists for monty stack
- * @ln: number of line opcode occurs on
  */
 void rotr(stack_t **stack)
 {
