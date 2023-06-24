@@ -37,6 +37,7 @@ typedef struct instruction_s
 char *opcode;
 void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
 /**
  * struct monty_s - global variable for monty interpreter
  * @line_num: line number of byte code file
@@ -45,22 +46,19 @@ void (*f)(stack_t **stack, unsigned int line_number);
 */
 typedef struct monty_s
 {
-	unsigned int ln;
-	char *arg;
-	stack_t *stack;
-}  monty_t;
+unsigned int ln;
+char *arg;
+stack_t *stack;
+} monty_t;
+extern monty_t monty;
 
 /* in monty.c */
-FILE *check_args(int, char **);
-void (*get_ops(char *opcode))(stack_t **, unsigned int);
-void init_monty(void
-		);
+FILE *check_args(int argc, char **argv);
+void (*get_ops(char *opcode))(stack_t **stack, unsigned int ln);
+void init_monty(void);
 
 /* in util.c */
-int _isdigit(char *);
-
-extern monty_t monty;
-monty_t monty;
+int _isdigit(char *str);
 
 void free_stack(stack_t *stack);
 void push(stack_t **stack, unsigned int ln);
@@ -76,9 +74,9 @@ void mul(stack_t **stack, unsigned int ln);
 void mod(stack_t **stack, unsigned int ln);
 void pchar(stack_t **stack, unsigned int ln);
 void pstr(stack_t **stack, unsigned int ln);
-void rotl(stack_t **stac);
+void rotl(stack_t **stack);
 void rotr(stack_t **stack);
 void addnode(stack_t **stack, int n);
 void addqueue(stack_t **stack, int n);
 
-#endif
+#endif /* MONTY_H */
