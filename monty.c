@@ -2,9 +2,8 @@
 
 monty_t monty;
 
-/**
 void init_monty(void)
-*/
+
 {
 monty.arg = NULL;
 monty.ln = 0;
