@@ -1,9 +1,10 @@
 #include "monty.h"
 
+monty_t monty;
+
 /**
- * init_monty - initialise global (monty) variable
- */
 void init_monty(void)
+*/
 {
 monty.arg = NULL;
 monty.ln = 0;
