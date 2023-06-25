@@ -10,9 +10,9 @@
 void init_monty(monty_t *monty)
 
 {
-monty.arg = NULL;
-monty.ln = 0;
-monty.stack = NULL;
+monty->arg = NULL;
+monty->ln = 0;
+monty->stack = NULL;
 }
 
 /**
@@ -61,18 +61,18 @@ fp = check_args(ac, av);
 
 while ((flag = getline(&lineptr, &n, fp) != -1))
 {
-monty.ln++;
+monty->ln++;
 opcode = strtok(lineptr, DELIM);
 if (opcode)
 {
 func = get_ops(opcode);
 if (!func)
 {
-dprintf(2, "L%d: unknown instruction %s\n", monty.ln, opcode);
+dprintf(2, "L%d: unknown instruction %s\n", monty->ln, opcode);
 exit(EXIT_FAILURE);
 }
-monty.arg = strtok(NULL, DELIM);
-func(&monty.stack, monty.ln);
+monty->arg = strtok(NULL, DELIM);
+func(&monty->stack, monty->ln);
 }
 }
 free(lineptr);
