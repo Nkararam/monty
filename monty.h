@@ -50,8 +50,9 @@ unsigned int ln;
 char *arg;
 stack_t *stack;
 } monty_t;
-extern monty_t *monty;
-void init_monty(monty_t *monty);
+extern monty_t monty;
+
+void init_monty(void);
 /* in monty.c */
 FILE *check_args(int argc, char **argv);
 void (*get_ops(char *opcode))(stack_t **stack, unsigned int ln);
