@@ -60,7 +60,9 @@ void init_monty(void);
 
 /* in util.c */
 int _isdigit(char *str);
+// monty.h
 
+void execute(stack_t **stack, unsigned int ln);
 void free_stack(stack_t *stack);
 void push(stack_t **stack, unsigned int ln);
 void pall(stack_t **stack, unsigned int ln);
