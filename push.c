@@ -19,12 +19,12 @@ dprintf(STDERR_FILENO, "Error: malloc failed\n");
 exit(EXIT_FAILURE);
 }
 
-if (!monty.arg || (isdigit(monty.arg) == -1))
+if (!monty->arg || (isdigit(monty->arg) == -1))
 {
 dprintf(STDERR_FILENO, "L%u: usage: push integer\n", ln);
 exit(EXIT_FAILURE);
 }
-data = atoi(monty.arg);
+data = atoi(monty->arg);
 new_node->n = data;
 new_node->next = NULL;
 new_node->prev = NULL;
