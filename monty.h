@@ -52,7 +52,7 @@ stack_t *stack;
 } monty_t;
 extern monty_t *monty;
  monty_t *monty;
-int_monty(void);
+void init_monty(monty_t *monty)
 /* in monty.c */
 FILE *check_args(int argc, char **argv);
 void (*get_ops(char *opcode))(stack_t **stack, unsigned int ln);

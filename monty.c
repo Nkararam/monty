@@ -1,8 +1,13 @@
 #include "monty.h"
 
-monty_t monty;
+/**
+ * init_monty - Initializes the monty_t structure
+ * @monty: Pointer to the monty_t structure to be initialized
+ * This function sets the members of the monty_t structure to their initial
+ * values, preparing it for use.
+ */
 
-void init_monty(void)
+void init_monty(monty_t *monty)
 
 {
 monty.arg = NULL;
